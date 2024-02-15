@@ -1,0 +1,59 @@
+section#who{
+
+}
+section#who div.wrap{  
+
+}
+section#who div.wrap h2{ 
+  font-size: 20px;
+  font-weight: 700;
+  color: #077c34;
+}
+section#who div.wrap p{
+  font-weight: 600;
+  margin: 20px 0 60px 0;
+}
+section#who div.button{   
+  position: relative;
+  margin: 20px 0;
+}
+section#who div.button a.left{   
+  background-image: url(../img/prevArrow.png);
+  font-size: 0;
+  background-size: contain;
+  width: 51px;
+  height: 23px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 83px;
+}
+section#who div.button a.right{
+  background-image: url(../img/nextArrow.png);
+  font-size: 0;
+  background-size: contain;
+  width: 51px;
+  height: 23px;
+  display: block; 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+section#who div.wrap figure{   
+  position: relative;
+  grid-column: 1 /span2;
+}
+section#who div.wrap figure img{   
+  border-radius: 20px;
+  margin-right: 60px;
+}
+section#who div.wrap figure figcaption{
+  text-align: end;
+  position: absolute;
+  bottom: 53px;
+  right: 55px;
+  font-size: 47px;
+  line-height: 1.2;
+  color: white;
+  font-weight: 600;
+}

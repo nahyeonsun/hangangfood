@@ -1,0 +1,70 @@
+aside{
+  position: fixed;
+  top: 0;
+  right: 100%;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+}
+aside div.group{   
+
+  width: 1903px;
+}
+aside div.group .fnb{   
+  width: calc(100% / 3);
+  background-color: #171717;
+  justify-content: end;
+  padding: 50px;
+  box-sizing: border-box;
+}
+aside div.group .fnb ul{
+
+}
+aside div.group .fnb ul li{
+   
+}
+aside div.group .fnb ul li a{
+  color: #565656;
+  line-height: 3;
+  font-size: 17px;
+}
+aside div.group .fnb ul li:nth-child(1) a{   
+  color: #969696;
+  font-weight: 500;
+}
+aside div.group .fnb ul li:nth-child(2) a::before{
+  content: "｜";
+  margin: 0 10px;
+}
+aside div.group .fnb address{   
+  color: #565656;
+  padding: 30px 0 10px 0;
+}
+aside div.group .fnb p{   
+  color: #565656;
+}
+aside div.group .fnb p.coppy{
+  padding-top: 40px;
+  color: #303030;
+}
+aside div.group .gnb{   
+  width: calc(100% / 3);
+  padding: 64px;
+  background-color: white;
+  border-right: solid 1px #ddd;
+}
+aside div.group .gnb ul{
+   
+}
+aside div.group .gnb ul li{
+   
+}
+aside div.group .gnb ul li a{   
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 2.5;
+}
+.show{
+  right: 0% !important;
+  transition: 1s ease-in;
+}

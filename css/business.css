@@ -1,0 +1,37 @@
+#business{
+
+}
+#business div.wrap{   
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+#business div.wrap h2.h5{   
+  font-size: 20px;
+  font-weight: 700;
+  color: #077c34;
+}
+#business div.wrap p.h2{   
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 40px 0 80px 0;
+}
+#business div.wrap .flex{   
+  gap: 155px;
+}
+#business div.wrap .flex ul{
+   
+}
+#business div.wrap .flex ul img{   
+  width: 71px;
+}
+#business div.wrap .flex ul li{   
+  font-size: 30px;
+  font-weight: 600;
+  margin: 60px 0 30px 0;
+}
+#business div.wrap .flex ul p.p{
+  font-size: 16px;
+  font-weight: 300;
+  color: #666666;
+}

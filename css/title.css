@@ -1,0 +1,51 @@
+#title{  
+
+}
+#title .wrap{
+  gap: 15px;
+  max-width: 100%;
+}
+#title .wrap .slick-list{
+  height: 100%;
+}
+#title .wrap .slick-list .slick-track{
+  height: 100%;
+}
+#title .wrap .witem{
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+#title .wrap .witem1{  
+
+}
+#title .wrap .witem1 video{ 
+
+}
+#title .wrap .witem1 video source{
+  
+}
+#title .wrap .witem2{
+
+}
+#title .wrap .witem3{
+
+}
+#title .wrap h2{  
+  font-weight: 800;
+  font-size: 75px;
+  margin: 0 0 100px 200px;
+  line-height: 1.2;
+}
+#title .wrap input{
+  
+}
+#title .wrap p{   
+  order: 1;
+  font-size: 20px;
+  color: white;
+  padding-bottom: 20px;
+}
+#title .wrap h2 span{
+}

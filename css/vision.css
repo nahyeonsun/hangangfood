@@ -1,0 +1,43 @@
+#vision{
+  background-color: #f7f6f1;
+}
+#vision div.wrap{
+
+}
+#vision div.wrap h2{
+  font-size: 20px;
+  font-weight: 700;
+  color: #077c34;
+}
+#vision div.wrap p{
+  font-weight: 600;
+  margin: 20px 0 60px 0;
+}
+#vision div.wrap div.flex{
+  gap: 22px;
+}
+#vision div.wrap div.flex a{
+
+}
+#vision div.wrap div.flex a figure{
+   
+  position: relative;
+}
+#vision div.wrap div.flex a figure img{   
+  border-radius: 15px;
+}
+#vision div.wrap div.flex a figure figcaption{   
+  font-size: 28px;
+  color: white;
+  position: absolute;
+  bottom: 40px;
+  text-align: center;
+  left: 129px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+#vision div.wrap div.flex a figure figcaption span{
+  
+  font-size: 18px;
+  margin-top: 20px;
+}
