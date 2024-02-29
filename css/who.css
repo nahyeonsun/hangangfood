@@ -4,40 +4,40 @@ section#who{
 section#who div.wrap{  
 
 }
-section#who div.wrap h2{ 
+section#who div.wrap .animation{
+  animation-name: down;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+@keyframes down{
+  0%{
+   transform: translateY(0); 
+   opacity: 1;
+  }
+  100%{
+   transform: translateY(20px); 
+   opacity: 0; 
+  }
+}
+section#who div.wrap .animation h2{ 
   font-size: 20px;
   font-weight: 700;
   color: #077c34;
 }
-section#who div.wrap p{
+section#who div.wrap .animation p{
   font-weight: 600;
   margin: 20px 0 60px 0;
 }
-section#who div.button{   
-  position: relative;
-  margin: 20px 0;
+.slick-prev{  
+  left: 91% !important;
+  top: -75px !important;
 }
-section#who div.button a.left{   
+.slick-prev::before{
   background-image: url(../img/prevArrow.png);
-  font-size: 0;
-  background-size: contain;
+  content: "" !important;
   width: 51px;
   height: 23px;
   display: block;
-  position: absolute;
-  bottom: 0;
-  right: 83px;
-}
-section#who div.button a.right{
-  background-image: url(../img/nextArrow.png);
-  font-size: 0;
-  background-size: contain;
-  width: 51px;
-  height: 23px;
-  display: block; 
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 section#who div.wrap figure{   
   position: relative;
@@ -56,4 +56,15 @@ section#who div.wrap figure figcaption{
   line-height: 1.2;
   color: white;
   font-weight: 600;
+}
+.slick-next{  
+  left: 97% !important;
+  top: -75px !important;
+}
+.slick-next::before{
+  background-image: url(../img/nextArrow.png);
+  content: "" !important;
+  width: 51px;
+  height: 23px;
+  display: block;
 }

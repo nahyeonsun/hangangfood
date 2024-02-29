@@ -31,17 +31,11 @@
     <link rel="stylesheet" href="css/asid.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/response.css">
-    <!-- 제이쿼리 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 자바스크립트 -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            // 서브메뉴 마우스 올리면 보이게
-            // $("header div.wrap ul.gnb li").hover(function(){
-            //     $("header div.wrap .sublist").slideDown().addClass("show").fadeIn(300);
-            // });
-            // $("header div.wrap .sublist").mouseleave(function(){
-            //     $("header div.wrap .sublist").slideUp().removeClass("show").fadeOut(300);
-            // });
+
             // 햄버거 버튼 클릭하면 x로 만들기
             $(".ham").click(function(){
                 $("aside").addClass("show");
@@ -68,6 +62,17 @@
                 arrows: false,
                 fade: true
             });
+            $('.slideW').slick({
+                infinite: true,
+                autoplay: true,
+                dots:false,
+                arrows:true,
+                slidesToShow: 1,
+                SlidesToScroll: 1,
+                autoplaySpeed: 3000,
+                speed: 1500,
+
+            })
         });
     </script>	
 </head>
@@ -167,54 +172,45 @@
     </div>
     <!-- 메인영역 -->
     <main>
-        <section id="ppeum">
-            <div class="wrap flex center">
-                <h2 class="h5"></h2>
-                <div>
-                    <img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt="">
-                    <p></p>
-                </div>
-            </div>
-        </section>
         <!-- who -->
         <section id="who" class="vh100">
             <div class="wrap column flex center h100">
-                <h2 class="h5">WHO WE ARE</h2>
-                <div class="button flex">
+                <div class="animation">
+                    <h2 class="h5">WHO WE ARE</h2>
                     <p class="h2">한강식품이 새롭게 인사드립니다.</p>
-                    <a href="" class="left">left</a>
-                    <a href="" class="right">right</a>
                 </div>
-                <figure>
-                    <img src="img/whoimg1.jpg" alt="">
-                    <figcaption>동물복지와<span class="block"></span>
-                                최첨단 기술의 만남</figcaption>
-                </figure>
-                <figure class="hide">
-                    <img src="img/whoimg2.jpg" alt="">
-                    <figcaption>삶의 모든 순간에<span class="block"></span>
-                        함께하는 닭고기</figcaption>
-                </figure>
-                <figure class="hide">
-                    <img src="img/whoimg3.jpg" alt="">
-                    <figcaption>세계 최고의 품질을 향한<span class="block"></span>
-                                끊임없는 노력 </figcaption>
-                </figure>
-                <figure class="hide">
-                    <img src="img/whoimg4.jpg" alt="">
-                    <figcaption>환경과 안전을<span class="block"></span>
-                                최우선 하는 기업</figcaption>
-                </figure>
-                <figure class="hide">
-                    <img src="img/whoimg5.jpg" alt="">
-                    <figcaption>더불어 성장하고<span class="block"></span>
-                                행복을 나누는 기업</figcaption>
-                </figure>
+                <div class="slick slideW">
+                    <figure>
+                        <img src="img/whoimg1.jpg" alt="">
+                        <figcaption>동물복지와<span class="block"></span>
+                                    최첨단 기술의 만남</figcaption>
+                    </figure>
+                    <figure class="hide">
+                        <img src="img/whoimg2.jpg" alt="">
+                        <figcaption>삶의 모든 순간에<span class="block"></span>
+                            함께하는 닭고기</figcaption>
+                    </figure>
+                    <figure class="hide">
+                        <img src="img/whoimg3.jpg" alt="">
+                        <figcaption>세계 최고의 품질을 향한<span class="block"></span>
+                                    끊임없는 노력 </figcaption>
+                    </figure>
+                    <figure class="hide">
+                        <img src="img/whoimg4.jpg" alt="">
+                        <figcaption>환경과 안전을<span class="block"></span>
+                                    최우선 하는 기업</figcaption>
+                    </figure>
+                    <figure class="hide">
+                        <img src="img/whoimg5.jpg" alt="">
+                        <figcaption>더불어 성장하고<span class="block"></span>
+                                    행복을 나누는 기업</figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
         <!-- vision -->
         <section id="vision" class="vh100">
-            <div class="wrap column flex center h100">
+            <div class="wrap column flex center h100 ">
                 <h2 class="h5">COMPANY VISION</h2>
                 <p class="h2">동물복지 시스템 도입으로 신선한 닭고기를 제공합니다.</p>
                 <div class="flex">
@@ -341,28 +337,36 @@
         <section id="hangang">
             <div class="wrap flex center">
                 <ul>
-                    <img src="img/newsIcon.png" alt="">
-                    <li>뉴스</li>
-                    <p class="p">한강식품의 새로운 소식을<span class="block"></span>
-                                 전해 드립니다.</p>
+                    <a href="">
+                        <img src="img/newsIcon.png" alt="">
+                        <li>뉴스</li>
+                        <p class="p">한강식품의 새로운 소식을<span class="block"></span>
+                                    전해 드립니다.</p>
+                    </a>
                 </ul>
                 <ul>
-                    <img src="img/snsIcon.png" alt="">
-                    <li>SNS</li>
-                    <p class="p">여러 소셜을 통해 소개하는<span class="block"></span>
-                                 한강식품의 이야기</p>
+                    <a href="">
+                        <img src="img/snsIcon.png" alt="">
+                        <li>SNS</li>
+                        <p class="p">여러 소셜을 통해 소개하는<span class="block"></span>
+                                    한강식품의 이야기</p>
+                    </a>
                 </ul>
                 <ul>
-                    <img src="img/supportIcon.png" alt="">
-                    <li>고객지원</li>
-                    <p class="p">고객에게 다가가는<span class="block"></span>
-                                 한강식품이 되겠습니다.</p>
+                    <a href="">
+                        <img src="img/supportIcon.png" alt="">
+                        <li>고객지원</li>
+                        <p class="p">고객에게 다가가는<span class="block"></span>
+                                    한강식품이 되겠습니다.</p>
+                    </a>
                 </ul>
                 <ul>
+                    <a href="">
                     <img src="img/recruitIcon.png" alt="">
                     <li>채용정보</li>
                     <p class="p">각 파트에 최선을 다하는<span class="block"></span>
                                  인재를 기다립니다.</p>
+                    </a>
                 </ul>
             </div>
         </section>
