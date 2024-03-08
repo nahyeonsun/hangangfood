@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pf한강식품</title>
+    <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
 
@@ -43,7 +44,7 @@
             })
             $(window).scroll(function(){
             // 타이틀 영역에서 SNS 색상 변경
-                if($(window).scrollTop()<$("#title").height()){ // 타이틀 높이보다 크거나 같을 때
+                if($(window).scrollTop()<=$("#title").height()){ // 타이틀 높이보다 크거나 같을 때
                     $("footer .group .right ul.sns li a").addClass("currentSNS");
                 }else{
                     $("footer .group .right ul.sns li a").removeClass("currentSNS");
@@ -84,7 +85,8 @@
                 SlidesToScroll: 1,
                 autoplaySpeed: 3000,
                 speed: 1500,
-
+                centerMode: true,
+                centerPadding: '20px'
             })
         });
     </script>	

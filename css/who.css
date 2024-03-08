@@ -1,23 +1,14 @@
 section#who{
-
+  overflow-x: hidden;
 }
 section#who div.wrap{  
-
+  max-width: calc(1500px + ((100vw - 1500px) / 2));
+  transform: translateX(calc((100vw - 1500px) / 2));
+  overflow-x: hidden;
+  margin: initial;
 }
 section#who div.wrap .animation{
-  /*! animation-name: down; */
-  /*! animation-duration: 0.5s; */
-  /*! animation-timing-function: ease-in; */
-}
-@keyframes down{
-  0%{
-   transform: translateY(0); 
-   opacity: 1;
-  }
-  100%{
-   transform: translateY(20px); 
-   opacity: 0; 
-  }
+
 }
 section#who div.wrap .animation h2{ 
   font-size: 20px;
@@ -28,41 +19,45 @@ section#who div.wrap .animation p{
   font-weight: 600;
   margin: 20px 0 60px 0;
 }
-.slick-prev{  
-  left: 91% !important;
+section#who .slick-prev{  
+  left: 77% !important;
   top: -75px !important;
 }
-.slick-prev::before{
+section#who .slick-prev::before{
   background-image: url(../img/prevArrow.png);
   content: "" !important;
   width: 51px;
   height: 23px;
   display: block;
 }
+section#who .slick-list{
+  transform: translateX(-214px);
+  overflow: initial;
+  padding-left: 170px !important;
+}
 section#who div.wrap figure{   
   position: relative;
   grid-column: 1 /span2;
-  margin-right: 50px;
+  padding: 0px 44px;
 }
 section#who div.wrap figure img{   
   border-radius: 20px;
-  margin-right: 60px;
 }
 section#who div.wrap figure figcaption{
   text-align: end;
   position: absolute;
   bottom: 53px;
-  right: 55px;
+  right: 85px;
   font-size: 47px;
   line-height: 1.2;
   color: white;
   font-weight: 600;
 }
-.slick-next{  
-  left: 97% !important;
+section#who .slick-next{  
+  left: 82% !important;
   top: -75px !important;
 }
-.slick-next::before{
+section#who .slick-next::before{
   background-image: url(../img/nextArrow.png);
   content: "" !important;
   width: 51px;
