@@ -166,9 +166,8 @@ footer .group .right select::after{
   vertical-align: -4px;
 }
 footer .group .right select option{
-  
   background-color: #121212;
-  border: ;
+  border: none;
 }
 footer .group .right ul.sns{  
   position: fixed;
@@ -178,12 +177,11 @@ footer .group .right ul.sns li{
   font-weight: 550;
 }
 footer .group .right ul.sns li a{  
-  color: white;
   margin-left: 20px;
 }
 footer .group .right ul.sns li a.blog::before{
   content: "";
-  background-image: url(../img/blogIcon.png);
+  background-image: url(../img/blogblack.png);
   width: 19px;
   height: 17px;
   display: inline-block;
@@ -193,7 +191,7 @@ footer .group .right ul.sns li a.blog::before{
 }
 footer .group .right ul.sns li a.insta::before{
   content: "";
-  background-image: url(../img/instagramIcon.png);
+  background-image: url(../img/instagramblack.png);
   width: 19px;
   height: 17px;
   display: inline-block;
@@ -203,11 +201,23 @@ footer .group .right ul.sns li a.insta::before{
 }
 footer .group .right ul.sns li a.you::before{
   content: "";
-  background-image: url(../img/youtubeIcon.png);
+  background-image: url(../img/youtubeblack.png);
   width: 19px;
   height: 17px;
   display: inline-block;
   vertical-align: -4px;
   padding-right: 8px;
   background-repeat: no-repeat;
+}
+.currentSNS{
+  color: #fff;
+}
+footer .group .right ul.sns li a.blog.currentSNS::before{
+  background-image: url(../img/blogIcon.png); 
+}
+footer .group .right ul.sns li a.insta.currentSNS::before{
+  background-image: url(../img/instagramIcon.png);
+}
+footer .group .right ul.sns li a.you.currentSNS::before{
+  background-image: url(../img/youtubeIcon.png); 
 }

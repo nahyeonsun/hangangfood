@@ -19,9 +19,13 @@
 #vision div.wrap div.flex a{
 
 }
-#vision div.wrap div.flex a figure{
-   
+#vision div.wrap div.flex a figure{   
   position: relative;
+}
+#vision div.wrap div.flex a figure:hover span{
+  opacity: 1;
+  margin-bottom: 20px;
+  transition: 0.5s;
 }
 #vision div.wrap div.flex a figure img{   
   border-radius: 15px;
@@ -30,14 +34,14 @@
   font-size: 28px;
   color: white;
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   text-align: center;
   left: 129px;
   line-height: 1.5;
   font-weight: 500;
 }
-#vision div.wrap div.flex a figure figcaption span{
-  
+#vision div.wrap div.flex a figure figcaption span{ 
   font-size: 18px;
   margin-top: 20px;
+  opacity: 0;
 }

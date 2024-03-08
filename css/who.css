@@ -5,9 +5,9 @@ section#who div.wrap{
 
 }
 section#who div.wrap .animation{
-  animation-name: down;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
+  /*! animation-name: down; */
+  /*! animation-duration: 0.5s; */
+  /*! animation-timing-function: ease-in; */
 }
 @keyframes down{
   0%{
@@ -42,6 +42,7 @@ section#who div.wrap .animation p{
 section#who div.wrap figure{   
   position: relative;
   grid-column: 1 /span2;
+  margin-right: 50px;
 }
 section#who div.wrap figure img{   
   border-radius: 20px;

@@ -35,13 +35,26 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-
-            // 햄버거 버튼 클릭하면 x로 만들기
+        // 햄버거 버튼 클릭하면 x로 만들고 사이드메뉴 보여주기
             $(".ham").click(function(){
                 $("aside").addClass("show");
                 $(".ham").toggleClass("x");
                 return false;
             })
+            $(window).scroll(function(){
+            // 타이틀 영역에서 SNS 색상 변경
+                if($(window).scrollTop()<$("#title").height()){ // 타이틀 높이보다 크거나 같을 때
+                    $("footer .group .right ul.sns li a").addClass("currentSNS");
+                }else{
+                    $("footer .group .right ul.sns li a").removeClass("currentSNS");
+                }
+            //  푸터 영역에서 SNS 색상 변경
+                if($(window).scrollTop()>=$("#who").height()+$("#vision").height()+$("#brand").height()+$("#offer").height()+$("#business").height()+$("#new").height()+$("#hangang").height()){
+                    $("footer .group .right ul.sns li a").addClass("currentSNS");  
+                }else{
+                    $("footer .group .right ul.sns li a").removeClass("currentSNS");
+                }
+            });
         });
     </script>
     <!-- slick -->
@@ -58,7 +71,7 @@
                 autoplay: true,
                 autoplaySpeed: 2000,
                 speed: 7000,
-                dots: false,
+                dots: true,
                 arrows: false,
                 fade: true
             });
@@ -75,6 +88,14 @@
             })
         });
     </script>	
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            AOS.init();
+        });
+    </script>
 </head>
 <body>
     <!-- 상단영역 -->
@@ -149,24 +170,24 @@
     </header>
     <!-- 타이틀영역 -->
     <div id="title" class="vh100">
-        <div class="titleAni wrap h100">
+        <div class="wrap titleAni">
             <div class=" witem witem1 flex column align-center center">
                 <video autoplay loop muted="">
                     <source src="img/title1.mp4" type="video/mp4" autoplay controls>
                 </video>
-                <h2 class="h1">자연 그대로의 신선함을 추구하는<span class="block"></span>동물복지 닭고기 회사</h2>
+                <h2 class="h1" data-aos="fade-right" data-aos-duration="2000">자연 그대로의 신선함을 추구하는<span class="block"></span>동물복지 닭고기 회사</h2>
             </div>
             <div class="witem witem2 flex column align-center center">
                 <video autoplay loop muted="">
                     <source src="img/title2.mp4" type="video/mp4" autoplay controls>
                 </video>
-                <h2 class="h1">Global High-end Chicken<span class="block"></span>한강식품</h2>
+                <h2 class="h1" data-aos="fade-right" data-aos-duration="2000">Global High-end Chicken<span class="block"></span>한강식품</h2>
             </div>
             <div class="witem witem3 flex column align-center center">
                 <video autoplay loop muted="">
                     <source src="img/title3.mp4" type="video/mp4" autoplay controls>
                 </video>
-                <h2 class="h1">육즙꽉찬<span class="block"></span>닭고기 한강식품</h2>
+                <h2 class="h1" data-aos="fade-right" data-aos-duration="2000">육즙꽉찬<span class="block"></span>닭고기 한강식품</h2>
             </div>
         </div>
     </div>
@@ -175,32 +196,32 @@
         <!-- who -->
         <section id="who" class="vh100">
             <div class="wrap column flex center h100">
-                <div class="animation">
+                <div class="animation " data-aos="fade-down" data-aos-duration="700">
                     <h2 class="h5">WHO WE ARE</h2>
                     <p class="h2">한강식품이 새롭게 인사드립니다.</p>
                 </div>
                 <div class="slick slideW">
-                    <figure>
+                    <figure data-aos="fade-right" data-aos-duration="2000">
                         <img src="img/whoimg1.jpg" alt="">
                         <figcaption>동물복지와<span class="block"></span>
                                     최첨단 기술의 만남</figcaption>
                     </figure>
-                    <figure class="hide">
+                    <figure data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1000">
                         <img src="img/whoimg2.jpg" alt="">
                         <figcaption>삶의 모든 순간에<span class="block"></span>
                             함께하는 닭고기</figcaption>
                     </figure>
-                    <figure class="hide">
+                    <figure data-aos="fade-right" data-aos-duration="2000" data-aos-delay="2000">
                         <img src="img/whoimg3.jpg" alt="">
                         <figcaption>세계 최고의 품질을 향한<span class="block"></span>
                                     끊임없는 노력 </figcaption>
                     </figure>
-                    <figure class="hide">
+                    <figure data-aos="fade-right" data-aos-duration="2000" data-aos-delay="3000">
                         <img src="img/whoimg4.jpg" alt="">
                         <figcaption>환경과 안전을<span class="block"></span>
                                     최우선 하는 기업</figcaption>
                     </figure>
-                    <figure class="hide">
+                    <figure data-aos="fade-right" data-aos-duration="2000" data-aos-delay="4000">
                         <img src="img/whoimg5.jpg" alt="">
                         <figcaption>더불어 성장하고<span class="block"></span>
                                     행복을 나누는 기업</figcaption>
@@ -210,26 +231,28 @@
         </section>
         <!-- vision -->
         <section id="vision" class="vh100">
-            <div class="wrap column flex center h100 ">
-                <h2 class="h5">COMPANY VISION</h2>
-                <p class="h2">동물복지 시스템 도입으로 신선한 닭고기를 제공합니다.</p>
+            <div class="wrap column flex center h100">
+                <div data-aos="fade-down" data-aos-duration="700">
+                    <h2 class="h5">COMPANY VISION</h2>
+                    <p class="h2">동물복지 시스템 도입으로 신선한 닭고기를 제공합니다.</p>
+                </div>
                 <div class="flex">
                     <a href="">
-                        <figure>
+                        <figure data-aos="fade-right">
                             <img src="img/companyImg1.jpg" alt="">
                             <figcaption>우수품종관리<br>
                                         전문 부화 시스템<span class="block">MORE+</span></figcaption>
                         </figure>
                     </a>
                     <a href="">
-                        <figure>
+                        <figure data-aos="fade-right">
                             <img src="img/companyImg2.jpg" alt="">
                             <figcaption>스트레스 최소화를 위한<br>
                                         동물복지 도계 시스템<span class="block">MORE+</span></figcaption>
                         </figure>
                     </a>
                     <a href="">
-                        <figure>
+                        <figure data-aos="fade-right">
                             <img src="img/companyImg3.jpg" alt="">
                             <figcaption>스마트 팩토리<br>
                                         최첨단 도계 & 가공<span class="block">MORE+</span></figcaption>
@@ -241,10 +264,12 @@
         <!-- brand -->
         <section id="brand" class="vh100">
             <div class="wrap column flex center h100">
-                <h2 class="h5">BRAND</h2>
-                <p class="h2">한강식품의 소망을 담은<span class="block"></span>
-                              브랜드를 만들어 나아갑니다. </p>
-                <div class="flex">
+                <div data-aos="fade-down" data-aos-duration="700">
+                    <h2 class="h5">BRAND</h2>
+                    <p class="h2">한강식품의 소망을 담은<span class="block"></span>
+                                브랜드를 만들어 나아갑니다.</p>
+                </div>
+                <div class="flex" data-aos="fade-left" data-aos-duration="700">
                     <a href="">
                         <img src="img/brandImg1.jpg" alt="">
                         <img src="img/brandLogo1.png" alt="">
@@ -259,9 +284,9 @@
         <!-- offer -->
         <section id="offer" class="vh100">
             <div class="wrap column flex center h100">
-                <h2 class="h5">WHAT WE OFFER</h2>
-                <p class="h2">농장에서 식탁까지 One Stop 서비스로<span class="block"></span>
-                              합리적인 공급 및 판매망 구축 합니다. </p>
+                <h2 class="h5" data-aos="fade-down" data-aos-duration="700">WHAT WE OFFER</h2>
+                <p class="h2" data-aos="fade-down" data-aos-duration="700">농장에서 식탁까지 One Stop 서비스로<span class="block"></span>
+                            합리적인 공급 및 판매망 구축 합니다. </p>1
                 <div class="radius">
                     <a href="" class="arrow">more</a>
                     <a href="" class="green">MORE</a>
@@ -276,12 +301,15 @@
                     <li><span>06</span> 포장/유통</li>
                 </ul>
         </section>
+        <!-- business -->
         <section id="business" class="vh100">
             <div class="wrap column center h100">
-                <h2 class="h5">BUSINESS FIELD</h2>
-                <p class="h2">유통 경로별 맞춤 상품과 서비스를 제공함으로써<span class="block"></span>
-                              고객의 식탁에 가장 맛있는 닭고기를 공급합니다.</p>
-                <div class="flex">
+                <div data-aos="fade-down" data-aos-duration="700">
+                    <h2 class="h5">BUSINESS FIELD</h2>
+                    <p class="h2">유통 경로별 맞춤 상품과 서비스를 제공함으로써<span class="block"></span>
+                                고객의 식탁에 가장 맛있는 닭고기를 공급합니다.</p>
+                </div>
+                <div class="flex" data-aos="fade-up" data-aos-duration="700">
                     <ul>
                         <img src="img/businessIcon1.svg" alt="">
                         <li>프랜차이즈</li>
@@ -313,11 +341,14 @@
                 </div>
             </div>
         </section>
+        <!-- new -->
         <section id="new" class="vh100">
             <div class="wrap column center h100">
-                <h2 class="h5">NEW FACTORY CONSTRUCTION</h2>
-                <p class="h2">수도권 최초 닭고기 전문<span class="block"></span>
-                              단일 산업단지를 조성하고 있습니다. </p>
+                <div data-aos="fade-down" data-aos-duration="500">
+                    <h2 class="h5">NEW FACTORY CONSTRUCTION</h2>
+                    <p class="h2">수도권 최초 닭고기 전문<span class="block"></span>
+                                단일 산업단지를 조성하고 있습니다. </p>
+                </div>
                 <div class="flex">
                     <ul>
                         <img src="img/factoryIcon3.png" alt="">
@@ -334,6 +365,7 @@
                 </div>
             </div>
         </section>
+        <!--hangang -->
         <section id="hangang">
             <div class="wrap flex center">
                 <ul>
@@ -446,7 +478,7 @@
                 <option value="">팬오션</option>
             </select>
 
-                <ul class="sns flex">
+                <ul class="currentSNS sns flex">
                     <li>
                         <a href="" class="blog">BLOG </a>
                     </li>

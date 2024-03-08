@@ -1,7 +1,8 @@
 #title{  
-
+  height: 100%;
 }
 #title .wrap{
+  height: 100%;
   gap: 15px;
   max-width: 100%;
 }
@@ -9,7 +10,7 @@
   height: 100%;
 }
 #title .wrap .slick-list .slick-track{
-  height: 100%;
+  /*! height: 100%; */
 }
 #title .wrap .witem{
   height: 100%;
@@ -18,7 +19,7 @@
   justify-content: flex-end;
 }
 #title .wrap .witem1{  
-
+  height: 100%;
 }
 #title .wrap .witem1 video{ 
 
@@ -35,8 +36,12 @@
 #title .wrap h2{  
   font-weight: 800;
   font-size: 75px;
-  margin: 0 0 100px 200px;
   line-height: 1.2;
+  position: absolute;
+  z-index: 1;
+  bottom: 27%;
+  left: 10%;
+  color: #fff;
 }
 #title .wrap input{
   
@@ -48,4 +53,28 @@
   padding-bottom: 20px;
 }
 #title .wrap h2 span{
+}
+#title .wrap .slick-dots{
+  bottom: 104px;
+  left: 84%;
+  width: fit-content;
+}
+
+#title .slick-dots li:nth-child(1) button::before{
+  content: "1";
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+#title .slick-dots li:nth-child(2) button::before{
+  content: "2";
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+#title .slick-dots li:nth-child(3) button::before{
+  content: "3";
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
 }

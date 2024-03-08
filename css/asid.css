@@ -7,8 +7,11 @@ aside{
   z-index: 1;
 }
 aside div.group{   
-
-  width: 1903px;
+  width: 100vw;
+}
+aside div.group .wrap{
+  max-width: 1903px;
+  margin: 0;
 }
 aside div.group .fnb{   
   width: calc(100% / 3);
