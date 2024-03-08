@@ -1,5 +1,6 @@
 #offer{
   background-color: #f7f6f1;
+  overflow: hidden;
 }
 #offer div.wrap{   
   display: grid;
@@ -7,7 +8,7 @@
   grid-template-rows: auto 3% 20% auto auto;
   justify-content: initial;
   align-items: center;
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 #offer div.wrap h2{   
   font-size: 20px;
@@ -35,9 +36,7 @@
    height: 120px;
    position: absolute;
    font-size: 0;
-  
 }
-
 #offer div.wrap .radius a.arrow::after{
   content: "";
   background-image: url(../img/linkArrow.png);
@@ -98,6 +97,24 @@
   display: inherit;
   position: relative;
   line-height: 2.8;
+}
+#offer div.wrap ul li:nth-child(1){
+  left: 11%;
+}
+#offer div.wrap ul li:nth-child(2){ 
+  left: 39%;
+}
+#offer div.wrap ul li:nth-child(3){ 
+  left: 65%;
+}
+#offer div.wrap ul li:nth-child(4){ 
+  left: 86%;
+}
+#offer div.wrap ul li:nth-child(5){
+  left: 115%;
+}
+#offer div.wrap ul li:nth-child(6){ 
+  left: 134%;
 }
 #offer div.wrap ul li::before{
   content: "";
