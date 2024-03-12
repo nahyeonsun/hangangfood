@@ -16,6 +16,7 @@
   /*! display: inherit; */
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
+  margin-top: 40px;
 }
 #offer div.flex h2{   
   font-size: 20px;
@@ -94,14 +95,14 @@
   /*! cursor: col-resize; */
   padding-left: calc((100% - 1500px) / 2);
 }
-#offer div.flex ul{  
+#offer div.flex ol{  
   width: 100%;
   position: relative;
   z-index: 1;
   padding-left: calc((100% - 1500px) / 2);
   padding-top: 50px;
 }
-#offer div.flex ul::before{
+#offer div.flex ol::before{
   content: "";
   border-top: 1px solid #ddd;
   position: absolute;
@@ -109,7 +110,7 @@
   top: 75%;
   z-index: -1;
 }
-#offer div.flex ul li{
+#offer div.flex ol li{
   color: #077c34;
   font-weight: 500;
   font-size: 18px;
@@ -118,25 +119,25 @@
   position: relative;
   line-height: 2.8;
 }
-#offer div.flex ul li:nth-child(1){
+#offer div.flex ol li:nth-child(1){
   left: 18%;
 }
-#offer div.flex ul li:nth-child(2){ 
+#offer div.flex ol li:nth-child(2){ 
   left: 39%;
 }
-#offer div.flex ul li:nth-child(3){ 
+#offer div.flex ol li:nth-child(3){ 
   left: 65%;
 }
-#offer div.flex ul li:nth-child(4){ 
+#offer div.flex ol li:nth-child(4){ 
   left: 86%;
 }
-#offer div.flex ul li:nth-child(5){
+#offer div.flex ol li:nth-child(5){
   left: 115%;
 }
-#offer div.flex ul li:nth-child(6){ 
+#offer div.flex ol li:nth-child(6){ 
   left: 134%;
 }
-#offer div.flex ul li::before{
+#offer div.flex ol li::before{
   content: "";
   border-radius: 30px;
   display: inline;
@@ -146,25 +147,25 @@
   background-color: #f7f6f1;
   z-index: -1;
 }
-#offer div.flex ul li:nth-child(1)::before{
+#offer div.flex ol li:nth-child(1)::before{
   width: 135px;
 }
-#offer div.flex ul li:nth-child(2)::before{
+#offer div.flex ol li:nth-child(2)::before{
   width: 147px;
 }
-#offer div.flex ul li:nth-child(3)::before{
+#offer div.flex ol li:nth-child(3)::before{
   width: 131px;
 }
-#offer div.flex ul li:nth-child(4)::before{
+#offer div.flex ol li:nth-child(4)::before{
   width: 197px;
 }
-#offer div.flex ul li:nth-child(5)::before{
+#offer div.flex ol li:nth-child(5)::before{
   width: 131px;
 }
-#offer div.flex ul li:nth-child(6)::before{
+#offer div.flex ol li:nth-child(6)::before{
   width: 135px;
 }
-#offer div.flex ul li span{
+#offer div.flex ol li span{
   border-radius: 100%;
   width: 30px;
   height: 30px;
