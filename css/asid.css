@@ -5,6 +5,7 @@ aside{
   background-color: white;
   width: 100%;
   z-index: 1;
+  transition: 0.5s ease-out;
 }
 aside div.group{   
   width: 100vw;
@@ -67,7 +68,14 @@ aside div.group .gnb ul li a{
   font-weight: 700;
   line-height: 2.5;
 }
-.show{
+aside div.group .gnb ul li a::after{
+  content: "";
+  background-image: url(../img/);
+}
+aside div.group .gnb ul li a:hover{
+  
+}
+.rightShow{
   right: 0% !important;
-  transition: 1s ease-in;
+  transition: 0.7s ease-in;
 }

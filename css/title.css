@@ -1,5 +1,7 @@
 #title{  
   height: 100%;
+  position: relative;
+  z-index: -1;
 }
 #title .wrap{
   height: 100%;

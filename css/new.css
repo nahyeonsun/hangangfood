@@ -1,5 +1,11 @@
 #new{
-  background-image: url(../img/factoryBg.jpg);
+  background-image: url('../img/factoryBg.jpg');
+  width: 1500px; /* 초기 이미지 너비 */
+  height: 245px; /* 초기 이미지 높이 */
+  background-size: cover; /* 배경 이미지를 화면에 꽉 차게 설정 */
+  background-position: center; /* 배경 이미지를 가운데 정렬 */
+  transition: width 3s ease, height 3s ease; 
+  min-height: 0px;
 }
 #new div.wrap{   
   display: flex;

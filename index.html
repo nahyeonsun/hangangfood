@@ -38,16 +38,40 @@
         $(document).ready(function(){
         // 햄버거 버튼 클릭하면 x로 만들고 사이드메뉴 보여주기
             $(".ham").click(function(){
-                $("aside").addClass("show");
+                $("aside").toggleClass("rightShow");
                 $(".ham").toggleClass("x");
                 return false;
             })
+            $("footer .group .right .at").click(function(){
+                $("html,body").animate({scrollTop:"0px"},800);
+                return false; 
+            });
+            
             $(window).scroll(function(){
             // 타이틀 영역에서 SNS 색상 변경
                 if($(window).scrollTop()<=$("#title").height()){ // 타이틀 높이보다 크거나 같을 때
                     $("footer .group .right ul.sns li a").addClass("currentSNS");
                 }else{
                     $("footer .group .right ul.sns li a").removeClass("currentSNS");
+                }
+            // 팩토리 부분 이미지 서서히 보이기
+                var scrollPos = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var newOffset = $('#new').offset().top;
+                var newHeight = $('#new').height();
+
+                // 스크롤 이벤트가 해당 섹션에 도달할 때 이미지 크기를 조절합니다.
+                if (scrollPos + windowHeight > newOffset && scrollPos < newOffset + newHeight) {
+                    $('#new').css({
+                        width: '100%', // 배경 이미지 너비를 100%로 변경
+                        height: '100vh' // 배경 이미지 높이를 화면 높이로 변경
+                    });
+                } else {
+                    // 스크롤이 해당 섹션에 도달하지 않은 경우 초기 크기로 복원합니다.
+                    $('#new').css({
+                        width: '1500px', // 초기 너비로 복원
+                        height: '245px' // 초기 높이로 복원
+                    });
                 }
             //  푸터 영역에서 SNS 색상 변경
                 if($(window).scrollTop()>=$("#who").height()+$("#vision").height()+$("#brand").height()+$("#offer").height()+$("#business").height()+$("#new").height()+$("#hangang").height()){
@@ -56,8 +80,15 @@
                     $("footer .group .right ul.sns li a").removeClass("currentSNS");
                 }
             });
+            $('.custom-cursor').on('mouseenter', function(){
+                $(this).css('cursor', 'url("img/newsIcon.png"), auto'); // 커스텀 커서 이미지 경로 설정
+             }).on('mouseleave', function(){
+                $(this).css('cursor', 'pointer'); // 마우스가 벗어났을 때 기본 커서 스타일로 복원
+             });
+             
         });
     </script>
+
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -285,23 +316,29 @@
         </section>
         <!-- offer -->
         <section id="offer" class="vh100">
-            <div class="wrap column flex center h100">
-                <h2 class="h5" data-aos="fade-down" data-aos-duration="700">WHAT WE OFFER</h2>
-                <p class="h2" data-aos="fade-down" data-aos-duration="700">농장에서 식탁까지 One Stop 서비스로<span class="block"></span>
-                            합리적인 공급 및 판매망 구축 합니다.</p>
-                <div class="radius">
-                    <a href="" class="arrow">more</a>
-                    <a href="" class="green">MORE</a>
+            <div class="flex center h100">
+                <div class="wrap grid">
+                    <h2 class="h5" data-aos="fade-down" data-aos-duration="700">WHAT WE OFFER</h2>
+                    <p class="h2" data-aos="fade-down" data-aos-duration="700">농장에서 식탁까지 One Stop 서비스로<span class="block"></span>
+                                합리적인 공급 및 판매망 구축 합니다.</p>
+                    <div class="radius">
+                        <a href="" class="arrow">more</a>
+                        <a href="" class="green">MORE</a>
+                    </div>
                 </div>
-                <img src="img/whatImg.svg" alt="">
-                <ul class="flex">
-                    <li><span>01</span> 부화 사육</li>
-                    <li><span>02</span> 가스스터딩</li>
-                    <li><span>03</span> 에어칠링</li>
-                    <li><span>04</span> 최첨단 도계시스템</li>
-                    <li><span>05</span> 품질검사</li>
-                    <li><span>06</span> 포장/유통</li>
-                </ul>
+                <div id="hi">
+                    
+                    <img class="custom-cursor" src="img/whatImg.svg" alt="">
+                    <ul class="flex">
+                        <li><span>01</span> 부화 사육</li>
+                        <li><span>02</span> 가스스터딩</li>
+                        <li><span>03</span> 에어칠링</li>
+                        <li><span>04</span> 최첨단 도계시스템</li>
+                        <li><span>05</span> 품질검사</li>
+                        <li><span>06</span> 포장/유통</li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <!-- business -->
         <section id="business" class="vh100">
@@ -494,5 +531,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        // 마우스휠 수평스크롤
+        const scrollContainer = document.querySelector("#hi");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+            console.log(scrollContainer.scrollLeft);
+        });
+    </script>
 </body>
 </html>

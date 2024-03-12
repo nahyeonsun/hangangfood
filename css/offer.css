@@ -1,34 +1,44 @@
 #offer{
   background-color: #f7f6f1;
-  overflow: hidden;
+  /*! overflow: hidden; */
 }
-#offer div.wrap{   
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto 3% 20% auto auto;
-  justify-content: initial;
+#offer div.flex{   
+  justify-content: center;
   align-items: center;
-/*   overflow: hidden; */
+  max-width: 100%;
+  flex-wrap: wrap;
 }
-#offer div.wrap h2{   
+#offer .wrap{
+  
+  width: 1500px;
+  /*! grid-row: 1; */
+  justify-content: space-between;
+  /*! display: inherit; */
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+#offer div.flex h2{   
   font-size: 20px;
   font-weight: 700;
   color: #077c34;
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 1;
 }
-#offer div.wrap p.h2{   
+#offer div.flex p.h2{   
   font-weight: 600;
   line-height: 1.2;
-  grid-row: 3;
-}
-#offer div.wrap .radius{  
-  grid-column: 2;
   grid-row: 2;
-  position: relative;
-  margin-left: 544px;
+  margin-top: 30px;
 }
-#offer div.wrap .radius a.arrow{
+#offer .wrap .radius{  
+  grid-column: 2;
+  grid-row: 1/ span 2;
+  position: relative;
+  /*! margin-left: 544px; */
+  right: 123px;
+  top: 48px;
+}
+#offer .wrap .radius a.arrow{
    border-radius: 100%;
    display: inline-block;
    width: 120px;
@@ -37,7 +47,7 @@
    position: absolute;
    font-size: 0;
 }
-#offer div.wrap .radius a.arrow::after{
+#offer .wrap .radius a.arrow::after{
   content: "";
   background-image: url(../img/linkArrow.png);
   background-repeat: no-repeat; 
@@ -49,7 +59,7 @@
   left: 47px;
   top: 51px;
 }
-#offer div.wrap .radius a.green{
+#offer .wrap .radius a.green{
   width: 120px;
   height: 120px;
   border-radius: 100%;
@@ -64,32 +74,42 @@
   opacity: 0;
   transition: 0.5s
 }
-#offer div.wrap .radius:hover a.green{
+#offer .wrap:hover a.green{
   opacity: 1;
 }
-#offer div.wrap img{   
-  grid-row: 4;
-  grid-column: 1/ span 3;
+#offer div #hi{
+  width: 1903px;
+  overflow-x: hidden;
+  position: relative;
+}
+#offer .custom-cursor {
+  cursor: pointer; /* 기본 커서 스타일 */
+}
+
+#offer div.flex img{   
   width: 4970px;
   height: 337px;
   max-width: initial;
+
+  /*! cursor: col-resize; */
+  padding-left: calc((100% - 1500px) / 2);
 }
-#offer div.wrap ul{  
-  grid-column: 1 / span3;
-  grid-row: 5;
-  width: 100vw;
+#offer div.flex ul{  
+  width: 100%;
   position: relative;
   z-index: 1;
+  padding-left: calc((100% - 1500px) / 2);
+  padding-top: 50px;
 }
-#offer div.wrap ul::before{
+#offer div.flex ul::before{
   content: "";
   border-top: 1px solid #ddd;
   position: absolute;
   width: 100%;
-  top: 50%;
+  top: 75%;
   z-index: -1;
 }
-#offer div.wrap ul li{
+#offer div.flex ul li{
   color: #077c34;
   font-weight: 500;
   font-size: 18px;
@@ -98,53 +118,53 @@
   position: relative;
   line-height: 2.8;
 }
-#offer div.wrap ul li:nth-child(1){
-  left: 11%;
+#offer div.flex ul li:nth-child(1){
+  left: 18%;
 }
-#offer div.wrap ul li:nth-child(2){ 
+#offer div.flex ul li:nth-child(2){ 
   left: 39%;
 }
-#offer div.wrap ul li:nth-child(3){ 
+#offer div.flex ul li:nth-child(3){ 
   left: 65%;
 }
-#offer div.wrap ul li:nth-child(4){ 
+#offer div.flex ul li:nth-child(4){ 
   left: 86%;
 }
-#offer div.wrap ul li:nth-child(5){
+#offer div.flex ul li:nth-child(5){
   left: 115%;
 }
-#offer div.wrap ul li:nth-child(6){ 
+#offer div.flex ul li:nth-child(6){ 
   left: 134%;
 }
-#offer div.wrap ul li::before{
+#offer div.flex ul li::before{
   content: "";
   border-radius: 30px;
   display: inline;
   border: solid 1px;
   position: absolute;
-  height: 50px;
+  height: 48px;
   background-color: #f7f6f1;
   z-index: -1;
 }
-#offer div.wrap ul li:nth-child(1)::before{
+#offer div.flex ul li:nth-child(1)::before{
   width: 135px;
 }
-#offer div.wrap ul li:nth-child(2)::before{
+#offer div.flex ul li:nth-child(2)::before{
   width: 147px;
 }
-#offer div.wrap ul li:nth-child(3)::before{
+#offer div.flex ul li:nth-child(3)::before{
   width: 131px;
 }
-#offer div.wrap ul li:nth-child(4)::before{
+#offer div.flex ul li:nth-child(4)::before{
   width: 197px;
 }
-#offer div.wrap ul li:nth-child(5)::before{
+#offer div.flex ul li:nth-child(5)::before{
   width: 131px;
 }
-#offer div.wrap ul li:nth-child(6)::before{
+#offer div.flex ul li:nth-child(6)::before{
   width: 135px;
 }
-#offer div.wrap ul li span{
+#offer div.flex ul li span{
   border-radius: 100%;
   width: 30px;
   height: 30px;
