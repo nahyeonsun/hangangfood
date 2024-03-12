@@ -51,7 +51,7 @@
             // 타이틀 영역에서 SNS 색상 변경
                 if($(window).scrollTop()<=$("#title").height()){ // 타이틀 높이보다 크거나 같을 때
                     $("footer .group .right ul.sns li a").addClass("currentSNS");
-                }else{
+                } else{
                     $("footer .group .right ul.sns li a").removeClass("currentSNS");
                 }
             // 팩토리 부분 이미지 서서히 보이기
@@ -76,12 +76,12 @@
             //  푸터 영역에서 SNS 색상 변경
                 if($(window).scrollTop()>=$("#who").height()+$("#vision").height()+$("#brand").height()+$("#offer").height()+$("#business").height()+$("#new").height()+$("#hangang").height()){
                     $("footer .group .right ul.sns li a").addClass("currentSNS");  
-                }else{
+                } else{
                     $("footer .group .right ul.sns li a").removeClass("currentSNS");
                 }
             });
             $('.custom-cursor').on('mouseenter', function(){
-                $(this).css('cursor', 'url("img/newsIcon.png"), auto'); // 커스텀 커서 이미지 경로 설정
+                $(this).css('cursor', 'url("img/cursorDrag.png"), auto'); // 커스텀 커서 이미지 경로 설정
              }).on('mouseleave', function(){
                 $(this).css('cursor', 'pointer'); // 마우스가 벗어났을 때 기본 커서 스타일로 복원
              });
