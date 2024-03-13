@@ -67,13 +67,14 @@ aside div.group .gnb ul li a{
   font-size: 54px;
   font-weight: 700;
   line-height: 2.5;
+  color: #111;
 }
 aside div.group .gnb ul li a::after{
   content: "";
   background-image: url(../img/);
 }
 aside div.group .gnb ul li a:hover{
-  
+  border-bottom: 2px solid;
 }
 .rightShow{
   right: 0% !important;
