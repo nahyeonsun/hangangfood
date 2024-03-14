@@ -46,32 +46,18 @@
                 $("html,body").animate({scrollTop:"0px"},800);
                 return false; 
             });
-            
             $(window).scroll(function(){
+            // 뉴 팩토리 부분 이미지 서서히 보이기
+                if($(window).scrollTop()>=$("#who").height()+$("#vision").height()+$("#brand").height()+$("#offer").height()+$("#business").height()){
+                    $("#new").addClass("clipFull");
+                } else{
+                    $("#new").removeClass("clipFull");
+                }
             // 타이틀 영역에서 SNS 색상 변경
                 if($(window).scrollTop()<=$("#title").height()){ // 타이틀 높이보다 크거나 같을 때
                     $("footer .group .right ul.sns li a").addClass("currentSNS");
                 } else{
                     $("footer .group .right ul.sns li a").removeClass("currentSNS");
-                }
-            // 팩토리 부분 이미지 서서히 보이기
-                var scrollPos = $(window).scrollTop();
-                var windowHeight = $(window).height();
-                var newOffset = $('#new').offset().top;
-                var newHeight = $('#new').height();
-
-                // 스크롤 이벤트가 해당 섹션에 도달할 때 이미지 크기를 조절합니다.
-                if (scrollPos + windowHeight > newOffset && scrollPos < newOffset + newHeight) {
-                    $('#new').css({
-                        width: '100%', // 배경 이미지 너비를 100%로 변경
-                        height: '100vh' // 배경 이미지 높이를 화면 높이로 변경
-                    });
-                } else {
-                    // 스크롤이 해당 섹션에 도달하지 않은 경우 초기 크기로 복원합니다.
-                    $('#new').css({
-                        width: '1500px', // 초기 너비로 복원
-                        height: '245px' // 초기 높이로 복원
-                    });
                 }
             //  푸터 영역에서 SNS 색상 변경
                 if($(window).scrollTop()>=$("#who").height()+$("#vision").height()+$("#brand").height()+$("#offer").height()+$("#business").height()+$("#new").height()+$("#hangang").height()){
@@ -326,8 +312,7 @@
                         <a href="" class="green">MORE</a>
                     </div>
                 </div>
-                <div id="hi">
-                    
+                <div class="Horizontal">
                     <img class="custom-cursor" src="img/whatImg.svg" alt="제공하는 것">
                     <ol class="flex">
                         <li><span>01</span> 부화 사육</li>
@@ -533,7 +518,7 @@
     </footer>
     <script>
         // 마우스휠 수평스크롤
-        const scrollContainer = document.querySelector("#hi");
+        const scrollContainer = document.querySelector(".Horizontal");
 
         scrollContainer.addEventListener("wheel", (evt) => {
             evt.preventDefault();

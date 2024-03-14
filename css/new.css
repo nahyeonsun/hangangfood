@@ -1,11 +1,8 @@
 #new{
   background-image: url('../img/factoryBg.jpg');
-  width: 1500px; /* 초기 이미지 너비 */
-  height: 245px; /* 초기 이미지 높이 */
-  background-size: cover; /* 배경 이미지를 화면에 꽉 차게 설정 */
-  background-position: center; /* 배경 이미지를 가운데 정렬 */
-  transition: width 3s, height 3s; 
-  min-height: 0px;
+  background-size: cover;
+  clip-path: polygon(15% 20%, 85% 20.00%, 85% 50%, 15% 50%);
+  transition: 5s;
 }
 #new div.wrap{   
   display: flex;
@@ -42,4 +39,7 @@
   font-size: 16px;
   font-weight: 300;
   color: #666666;
+}
+.clipFull{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
 }

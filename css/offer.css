@@ -78,7 +78,7 @@
 #offer .wrap:hover a.green{
   opacity: 1;
 }
-#offer div #hi{
+#offer div .Horizontal{
   width: 1903px;
   overflow-x: hidden;
   position: relative;
@@ -93,7 +93,7 @@
   max-width: initial;
 
   /*! cursor: col-resize; */
-  padding-left: calc((100% - 1500px) / 2);
+  padding: 0 calc((100% - 1500px) / 2);
 }
 #offer div.flex ol{  
   width: 100%;
@@ -106,9 +106,10 @@
   content: "";
   border-top: 1px solid #ddd;
   position: absolute;
-  width: 100%;
+  width: 4970px;
   top: 75%;
   z-index: -1;
+  padding-left: 0 calc((100% - 1500px) / 2);
 }
 #offer div.flex ol li{
   color: #077c34;
