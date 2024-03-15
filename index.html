@@ -46,6 +46,18 @@
                 $("html,body").animate({scrollTop:"0px"},800);
                 return false; 
             });
+        //서브메뉴
+            $("header .wrap ul.gnb li a").hover(function(){
+                $("header div.wrap .wgnb").stop().slideDown();
+                $("header .wrap ul.gnb li a").css("color", "black");
+            });
+            $("header div.wrap .wgnb").mouseleave(function(){
+                $(this).slideUp();
+                $("header .wrap ul.gnb li a").css("color", "#fff");
+            }); 
+            
+
+        //스크롤 이벤트
             $(window).scroll(function(){
             // 뉴 팩토리 부분 이미지 서서히 보이기
                 if($(window).scrollTop()>=$("#who").height()+$("#vision").height()+$("#brand").height()+$("#offer").height()+$("#business").height()){
@@ -54,8 +66,8 @@
                     $("#new").removeClass("clipFull");
                 }
             // 타이틀 영역에서 SNS 색상 변경
-                if($(window).scrollTop()<=$("#title").height()){ // 타이틀 높이보다 크거나 같을 때
-                    $("footer .group .right ul.sns li a").addClass("currentSNS");
+                if($(window).scrollTop()<=$("#title").height()){  // 타이틀 높이보다 크거나 같을 때
+                    $("footer .group .right ul.sns li a").addClass("currentSNS");  
                 } else{
                     $("footer .group .right ul.sns li a").removeClass("currentSNS");
                 }
@@ -66,11 +78,14 @@
                     $("footer .group .right ul.sns li a").removeClass("currentSNS");
                 }
             });
-            $('.custom-cursor').on('mouseenter', function(){
-                $(this).css('cursor', 'url("img/cursorDrag.png"), auto'); // 커스텀 커서 이미지 경로 설정
-             }).on('mouseleave', function(){
-                $(this).css('cursor', 'pointer'); // 마우스가 벗어났을 때 기본 커서 스타일로 복원
-             });
+
+
+            // 마우스 커서 변경
+                $('.custom-cursor').on('mouseenter', function(){
+                    $(this).css('cursor', 'url("img/cursorDrag.png"), auto'); 
+                }).on('mouseleave', function(){
+                    $(this).css('cursor', 'pointer');
+                });
              
         });
     </script>
@@ -130,49 +145,51 @@
                 <li><a href="">고객지원</a></li>
                 <li><a href="">채용정보</a></li>
             </ul>
-            <div class="sublist">
-                <div class="menu1">
-                    <h2 class="hide">회사소개</h2>
-                    <ul class="useguide">
-                        <li><a href="">기업소개</a></li>
-                        <li><a href="">CEO 인사말</a></li>
-                        <li><a href="">CI, BI 소개</a></li>
-                        <li><a href="">연혁</a></li>
-                        <li><a href="">오시는 길</a></li>
-                    </ul>
-                </div>
-                <div class="menu2">
-                    <h2 class="hide">제품소개</h2>
-                    <ul class="useguide">
-                        <li><a href="">브랜드</a></li>
-                    </ul>
-                </div>
-                <div class="menu3">
-                    <h2 class="hide">홍보센터</h2>
-                    <ul class="useguide">
-                        <li><a href="">뉴스룸</a></li>
-                        <li><a href="">사이버견학</a></li>
-                        <li><a href="">현장견학신청</a></li>
-                        <li><a href="">ESG경영</a></li>
-                    </ul>
-                </div>
-                <div class="menu4">
-                    <h2 class="hide">고객지원</h2>
-                    <ul class="useguide">
-                        <li><a href="">공지사항</a></li>
-                        <li><a href="">자주하는 질문</a></li>
-                        <li><a href="">고객의 소리</a></li>
-                    </ul>
-                </div>
-                <div class="menu5">
-                    <h2 class="hide">채용정보</h2>
-                    <ul class="useguide">
-                        <li><a href="">인재상</a></li>
-                        <li><a href="">직무소개</a></li>
-                        <li><a href="">채용 프로세스</a></li>
-                        <li><a href="">채용공고</a></li>
-                        <li><a href="">채용FAQ</a></li>
-                    </ul>
+            <div class="wgnb">
+                <div class="sublist">
+                    <div class="menu1">
+                        <h2 class="hide">회사소개</h2>
+                        <ul class="useguide">
+                            <li><a href="">기업소개</a></li>
+                            <li><a href="">CEO 인사말</a></li>
+                            <li><a href="">CI, BI 소개</a></li>
+                            <li><a href="">연혁</a></li>
+                            <li><a href="">오시는 길</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu2">
+                        <h2 class="hide">제품소개</h2>
+                        <ul class="useguide">
+                            <li><a href="">브랜드</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu3">
+                        <h2 class="hide">홍보센터</h2>
+                        <ul class="useguide">
+                            <li><a href="">뉴스룸</a></li>
+                            <li><a href="">사이버견학</a></li>
+                            <li><a href="">현장견학신청</a></li>
+                            <li><a href="">ESG경영</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu4">
+                        <h2 class="hide">고객지원</h2>
+                        <ul class="useguide">
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">자주하는 질문</a></li>
+                            <li><a href="">고객의 소리</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu5">
+                        <h2 class="hide">채용정보</h2>
+                        <ul class="useguide">
+                            <li><a href="">인재상</a></li>
+                            <li><a href="">직무소개</a></li>
+                            <li><a href="">채용 프로세스</a></li>
+                            <li><a href="">채용공고</a></li>
+                            <li><a href="">채용FAQ</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="searchbar">

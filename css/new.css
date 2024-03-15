@@ -2,7 +2,7 @@
   background-image: url('../img/factoryBg.jpg');
   background-size: cover;
   clip-path: polygon(15% 20%, 85% 20.00%, 85% 50%, 15% 50%);
-  transition: 5s;
+  transition: 3s;
 }
 #new div.wrap{   
   display: flex;
