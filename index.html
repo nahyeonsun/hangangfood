@@ -54,19 +54,6 @@
             $("header div.wrap .wgnb").mouseleave(function(){
                 $(this).slideUp();
                 $("header .wrap ul.gnb li a").css("color", "#fff");
-            }); 
-        //서브메뉴에 마우스를 올려도 대메뉴 hover는 유지시키기
-            $("header .wrap ul.gnb li a").hover(function(){
-                $(this).addClass("borderGreen");
-            });
-            $("header div.wrap .wgnb").mouseleave(function(){
-                $("header .wrap ul.gnb li a").removeClass("borderGreen");
-            });
-            $("header .sublist div ul.useguide li a").hover(function(){
-                $(this).css("color", "green");
-            });
-            $("header .sublist div ul.useguide li a").mouseleave(function(){
-                $(this).css("color", "");
             });
 
         //스크롤 이벤트

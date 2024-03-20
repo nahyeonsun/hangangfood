@@ -39,10 +39,10 @@ header .wrap ul.gnb li a {
   color: white;
   font-weight: 700;
 }
-/* header .wrap ul.gnb li a:hover{
+header .wrap ul.gnb li a:hover{
   border-bottom: 3px solid green;
   transition: 1s;
-} */
+}
 header div.wrap .wgnb{
   position: absolute;
   left: 0;
@@ -96,9 +96,10 @@ header .sublist div ul.useguide li a {
   transition: 0.5s;
   line-height: 2.5;
 }
-/* header .sublist div ul.useguide li a:hover{
+header .sublist div ul.useguide li a:hover{
   color: green;
-} */
+  font-weight: 700;
+}
 header .wrap span.lang {
 
 }
